@@ -5,8 +5,11 @@ import heroImg from './assets/hero.png'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+  let [name, setName] = useState("Miguel");
+  const addCount = () => setCount((count) => count + 1);
 
+  const changeName = () => setName((name) => (name = "Monkiki"));
   return (
     <>
       <section id="center">
