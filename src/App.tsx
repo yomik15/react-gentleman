@@ -1,17 +1,13 @@
 import { useState } from "react";
-
+import { ClassState, FnVarState, StateBatching, UseState } from "./components";
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <button
-        type="button"
-        className="counter"
-        onClick={() => setCount((count) => count + 1)}
-      >
-        Count is {count}
-      </button>
+      <FnVarState />
+      <ClassState />
+      {/* Ver ClosureState.ts Js Code */}
+      <UseState />
+      <StateBatching />
     </>
   );
 }
