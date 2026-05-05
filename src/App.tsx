@@ -1,19 +1,13 @@
-import { useState } from "react";
-
+import { Parent, ClosureState, UpdaterState } from "./useEffect"
+// useEffect: sync external entities:ParentComponent state eventHandlers,fetch api endpoints,addEventListener,setInterval etc.
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <button
-        type="button"
-        className="counter"
-        onClick={() => setCount((count) => count + 1)}
-      >
-        Count is {count}
-      </button>
+      {/* <Parent /> */}
+      {/* <ClosureState /> */}
+      <UpdaterState />
     </>
-  );
+  )
 }
 
-export default App;
+export default App
