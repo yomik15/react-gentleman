@@ -1,19 +1,21 @@
-import { useState } from "react";
-
+import { useFetchReducer } from "./hooks/useFetchReducer"
+const url = "https://jsonplaceholder.typicode.com/todos/1"
+const url2 = "https://jsonplaceholder.typicode.com/users"
 function App() {
-  const [count, setCount] = useState(0);
+  const { loading, data, error } = useFetchReducer(url2)
+
+  if (loading) {
+    return <>Loading ...</>
+  }
+  if (error != null) {
+    return <>{`Error ${error.message}`}</>
+  }
 
   return (
     <>
-      <button
-        type="button"
-        className="counter"
-        onClick={() => setCount((count) => count + 1)}
-      >
-        Count is {count}
-      </button>
+      <>{JSON.stringify(data)}</>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
