@@ -1,19 +1,13 @@
-import { useState } from "react";
+import { UseMemo, UseMemo2, UseMemo3 } from "./UseMemo"
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <button
-        type="button"
-        className="counter"
-        onClick={() => setCount((count) => count + 1)}
-      >
-        Count is {count}
-      </button>
+      {/* <UseMemo /> */}
+      {/* <UseMemo2 /> */}
+      <UseMemo3 />
     </>
-  );
+  )
 }
 
-export default App;
+export default App
