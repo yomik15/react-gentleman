@@ -1,19 +1,14 @@
-import { useState } from "react";
-
+import ThemeApp from "./ThemeApp/ThemeApp.tsx"
+import ThemeAppContext from "./ThemeContext/ThemeAppContext.tsx"
+import ThemeAppContext2 from "./ThemeContext2/ThemeAppContext2.tsx"
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <button
-        type="button"
-        className="counter"
-        onClick={() => setCount((count) => count + 1)}
-      >
-        Count is {count}
-      </button>
+      {/* <ThemeApp /> */}
+      {/* <ThemeAppContext /> */}
+      <ThemeAppContext2 />
     </>
-  );
+  )
 }
 
-export default App;
+export default App
