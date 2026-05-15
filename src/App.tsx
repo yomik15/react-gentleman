@@ -1,19 +1,13 @@
-import { useState } from "react";
-
+import { useState } from "react"
+import { MessyApp } from "./messy"
 function App() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0)
 
   return (
     <>
-      <button
-        type="button"
-        className="counter"
-        onClick={() => setCount((count) => count + 1)}
-      >
-        Count is {count}
-      </button>
+      <MessyApp />
     </>
-  );
+  )
 }
 
-export default App;
+export default App
