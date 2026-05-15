@@ -1,5 +1,5 @@
 import { useState } from "react"
-import "./MessyApp.css"
+import "../App.css"
 import { Modal } from "./Modal"
 
 export function MessyApp() {
